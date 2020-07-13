@@ -2,7 +2,7 @@ var canvas = document.getElementById("canvas"),
                 context = canvas.getContext("2d");
                  
             var img = new Image();
-            img.src = "dubi.png";
+            img.src = "https://st.depositphotos.com/1757583/2169/i/450/depositphotos_21696885-stock-photo-yin-yang-symbol.jpg";
             img.onload = function() {
                  
                 context.drawImage(img, 0, 0);
