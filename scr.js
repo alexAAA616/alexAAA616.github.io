@@ -25,4 +25,9 @@ var canvas = document.getElementById("canvas"),
 
 let input = document.getElementById('input');
 
-input.onchange = () => { img.src =  window.URL.createObjectURL(input.files[0]); img.onload = () => {context.drawImage(img, 0, 0); alert(context.getImageData(0,0, img.width, img.height).data[0]); }}
+input.onchange = () => { 
+  img.src =  window.URL.createObjectURL(input.files[0]); img.onload = () => { 
+    context.drawImage(img, 0, 0); 
+    alert(context.getImageData(0,0, img.width, img.height).data[0] + ';'+context.getImageData(0,0, img.width, img.height).data[1] + ';'+context.getImageData(0,0, img.width, img.height).data[2]); 
+  }
+}
